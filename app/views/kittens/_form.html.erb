@@ -1,15 +1,40 @@
-<%= form_with model: @kitten, class: "flex flex-col w-72 gap-4 self-center" do |form| %>
-  <%= form.label :name, 'Name:' %>
-  <%= form.text_field :name %>
+<%= form_with model: @kitten, class: "flex flex-col w-9/12 gap-2 self-center" do |form| %>
+  <div class="flex">
+    <div class="w-72">
+      <%= form.label :name, 'Name:' %>
+      <%= form.text_field :name %>
+    </div>
+  </div>
 
-  <%= form.label :age, 'Age:' %>
-  <%= form.text_field :age %>
+  <div class="flex gap-2 align-middle">
+    <div class="w-72">
+      <%= form.label :age, 'Age:' %>
+      <%= form.text_field :age %>
+    </div>
+    <% @kitten.errors.full_messages_for(:age).each do |message| %>
+      <div class="error-msg"><%= message %></div>
+    <% end %>
+  </div>
 
-  <%= form.label :cuteness, 'Cuteness:' %>
-  <%= form.text_field :cuteness %>
+  <div class="flex gap-2 align-middle">
+    <div class="w-72">
+      <%= form.label :cuteness, 'Cuteness:' %>
+      <%= form.text_field :cuteness %>
+    </div>
+    <% @kitten.errors.full_messages_for(:cuteness).each do |message| %>
+      <div class="error-msg"><%= message %></div>
+    <% end %>
+  </div>
 
-  <%= form.label :softness, 'Softness:' %>
-  <%= form.text_field :softness %>
+  <div class="flex gap-2 align-middle">
+    <div class="w-72">
+      <%= form.label :softness, 'Softness:' %>
+      <%= form.text_field :softness %>
+    </div>
+    <% @kitten.errors.full_messages_for(:softness).each do |message| %>
+      <div class="error-msg"><%= message %></div>
+    <% end %>
+  </div>
 
-  <%= form.submit 'Create a Kitten', class: 'nav-button mt-4' %>
+  <%= form.submit 'Create a Kitten', class: 'nav-button mt-2 w-72' %>
 <% end %>

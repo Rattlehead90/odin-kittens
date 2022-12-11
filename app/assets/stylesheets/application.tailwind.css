@@ -16,6 +16,10 @@
   .li-option {
     @apply font-extralight text-sm pl-3 mt-2 text-white group-hover:text-black transition;
   }
+
+  .error-msg {
+    @apply font-extralight text-sm text-red-500;
+  }
 }
 
 
