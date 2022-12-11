@@ -1,0 +1,11 @@
+<% if flash[:alert] %>
+  <div class="block px-6 mt-[-2] text-red-400" role="alert">
+    <%= flash[:alert] %>
+  </div>
+<% elsif flash[:success] %>
+  <div class="block px-6 mt-[-2] text-blue-400">
+    <%= flash[:success] %>
+  </div>
+<% else %>
+  <div class="block px-6 mt-[-2] text-slate-50 h-6"></div>
+<% end %>
