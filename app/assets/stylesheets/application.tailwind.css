@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+  .heading-1 {
+    @apply font-bold text-3xl p-8;
+  }
+
+  .nav-button {
+    @apply bg-orange-200 text-orange-700 p-2 rounded-lg hover:bg-orange-700 hover:text-white;  
+  }
+}
+
+
