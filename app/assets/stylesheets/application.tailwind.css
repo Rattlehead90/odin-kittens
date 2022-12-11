@@ -12,6 +12,10 @@
   .nav-button {
     @apply bg-orange-200 text-orange-700 p-2 rounded-lg hover:bg-orange-700 hover:text-white;  
   }
+
+  .li-option {
+    @apply font-extralight text-sm pl-3 mt-2 text-white group-hover:text-black transition;
+  }
 }
 
 

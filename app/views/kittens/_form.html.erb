@@ -1,0 +1,15 @@
+<%= form_with model: @kitten, class: "flex flex-col w-72 gap-4 self-center" do |form| %>
+  <%= form.label :name, 'Name:' %>
+  <%= form.text_field :name %>
+
+  <%= form.label :age, 'Age:' %>
+  <%= form.text_field :age %>
+
+  <%= form.label :cuteness, 'Cuteness:' %>
+  <%= form.text_field :cuteness %>
+
+  <%= form.label :softness, 'Softness:' %>
+  <%= form.text_field :softness %>
+
+  <%= form.submit 'Create a Kitten', class: 'nav-button mt-4' %>
+<% end %>

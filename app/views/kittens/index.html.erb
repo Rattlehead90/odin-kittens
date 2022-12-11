@@ -1,6 +1,17 @@
 <h1 class="heading-1">Kittens' List</h1>
-<ul>
-  <% @kittens.each do |kitten| %>
-    <li><%= kitten.name %></li>
+<ul class="self-center text-2xl">
+  <% unless @kittens.empty? %>
+    <% @kittens.each do |kitten| %>
+      <li class="group">
+        <%= link_to kitten.name, kitten_path(kitten), class: "underline hover:no-underline hover:text-gray-500" %>
+        <%= link_to 'Edit', edit_kitten_path(kitten), class: "li-option" %>
+        <%= link_to 'Delete', kitten_path(kitten), class: "li-option", data: {
+                                                              turbo_method: :delete,
+                                                              turbo_confirm: "Are you sure?"
+                                                            } %>
+      </li>
+    <% end %>
+  <% else %>
+    <li>There are no kittens yet...</li>
   <% end %>
 </ul>
